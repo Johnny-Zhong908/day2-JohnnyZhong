@@ -48,22 +48,13 @@ public class MarsRover {
     public String marSite(int [] sites,char Orientation){
         return sites[0]+":"+sites[1]+":"+Orientation;
     }
-    public int[] moveForwarding(int [] site,char Orientation){
-        switch (Orientation) {
-            case 'N':
-                site[1] += 1;
-                break;
-            case 'W':
-                site[0] -= 1;
-                break;
-            case 'S':
-                site[1] -= 1;
-                break;
-            case 'E':
-                site[0] += 1;
-                break;
-            default:
-                System.out.println("False orientation");
+    public int[] moveForwarding(int[] site, char orientation) {
+        try {
+            MarsRover.Direction direction = MarsRover.Direction.valueOf(String.valueOf(orientation));
+            site[0] += direction.dx;
+            site[1] += direction.dy;
+        } catch (IllegalArgumentException e) {
+            System.out.println("False orientation");
         }
         return site;
     }
