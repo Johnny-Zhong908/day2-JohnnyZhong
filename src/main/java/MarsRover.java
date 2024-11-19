@@ -67,24 +67,13 @@ public class MarsRover {
             return orientation;
         }
     }
-    public char turningRight(char Orientation){
-        switch (Orientation){
-            case 'N':
-                Orientation='E';
-                break;
-            case 'E':
-                Orientation='S';
-                break;
-            case 'S':
-                Orientation='W';
-                break;
-            case 'W':
-                Orientation='N';
-                break;
-            default: System.out.println("False char");
-                break;
+    public char turningRight(char orientation) {
+        try {
+            MarsRover.Direction currentDir = MarsRover.Direction.valueOf(String.valueOf(orientation));
+            return RIGHT_TURNS.get(currentDir).name().charAt(0);
+        } catch (IllegalArgumentException e) {
+            System.out.println("False char");
+            return orientation;
         }
-        return Orientation;
-
     }
 }
