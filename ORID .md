@@ -1,0 +1,4 @@
+O: Today I received learning about testing, including TDD, writing and using unit test cases, as well as learning how to refactor and write code.
+R: I feel that the content I learned today may seem simple but is actually profound, and I feel a certain weakness in refactoring and optimizing the code.
+I: Testers need to be exposed to thinking different from development work and need to consider it thoroughly. Programmers need to have better programming skills to refactor and optimize their code.
+D: Learn the testing thinking of senior testing engineers to further enhance your programming skills and abilities.
